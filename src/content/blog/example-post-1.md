@@ -82,13 +82,8 @@ export default function App({ Component, pageProps }) {
 
 ## Links
 
-- [Asro.js]()
-- [React.js]()
-- [Next.js]()
+- [Astro.js](https://astro.build/)
+- [React.js](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
 
-## Footnotes
-
-- Footnote [^1].
-- Footnote [^2].
-
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY0aJnjE5q-zMbay5Y4RxqJnJX7Go_OYG_Rg&usqp=CAU)
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBCKtNhCfvcffO5Lpb-yepSlYszUIylKMP7Q&usqp=CAU)
