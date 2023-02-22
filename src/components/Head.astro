@@ -1,0 +1,21 @@
+---
+const { name } = Astro.props as { name: string };
+---
+
+<h1 class="hero__text">{name}</h1>
+
+<style>
+  .hero__text {
+    font-weight: 800;
+    font-size: 2.25rem;
+    color: var(--color-black);
+
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    .hero__text {
+      font-size: 2rem;
+    }
+  }
+</style>

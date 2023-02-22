@@ -1,0 +1,36 @@
+---
+import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+import Layout from "../components/Layout.astro";
+import Links from "../components/Links.astro";
+import Nav from "../components/Nav.astro";
+import { NAME } from "../config";
+import { Content } from "../content/home/home.md";
+---
+
+<Layout title={"About"} description={"Sadman Shami portfolio"}>
+  <Head name={NAME} />
+  <Nav />
+
+  <article>
+    <Content />
+  </article>
+
+  <hr class="hr" />
+
+  <Links />
+
+  <Footer />
+</Layout>
+
+<style>
+  article {
+    margin-top: 4rem;
+  }
+
+  .hr {
+    margin: 4rem 0;
+    border-color: #fff;
+    opacity: 0.5;
+  }
+</style>

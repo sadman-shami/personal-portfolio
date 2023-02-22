@@ -1,0 +1,28 @@
+---
+import { links, Links } from "../config";
+---
+
+<div class="links">
+  {
+    links.map((link: Links) => (
+      <p>
+        {link.name}:
+        <a href={link.url} target="_blank">
+          {link.aka}
+        </a>
+      </p>
+    ))
+  }
+</div>
+
+<style>
+  .links p {
+    margin: 4rem 0;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .links {
+    margin: 2rem 0;
+  }
+</style>

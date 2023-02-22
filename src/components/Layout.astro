@@ -1,0 +1,39 @@
+---
+export interface LayoutProps {
+  title: string;
+  description: string;
+}
+
+const { description, title } = Astro.props as LayoutProps;
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="follow, index" />
+    <meta property="og:site_name" content="Sadman Shami's personal portfolio" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="container">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style>
+  .container {
+    max-width: 680px;
+    margin: 6rem auto;
+    height: 100%;
+
+    padding: 1rem 2rem;
+  }
+</style>

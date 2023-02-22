@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+import Layout from "../components/Layout.astro";
+import Nav from "../components/Nav.astro";
+
+const blogPosts = await getCollection("blog", ({ data }) => {
+  return !data.draft;
+});
+---
+
+<Layout title="posts" description="Posts">
+  <Head name="Posts" />
+  <Nav />
+
+  {
+    blogPosts &&
+      blogPosts.map((post) => (
+        <Card
+          name={post.data.title}
+          description={post.data.desc}
+          date={post.data.date}
+          url={post.slug}
+        />
+      ))
+  }
+  <Footer />
+</Layout>

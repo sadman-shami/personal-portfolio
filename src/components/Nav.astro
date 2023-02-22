@@ -1,0 +1,51 @@
+---
+import { NavLinks, navLinks } from "../config";
+const currentURL = Astro.url;
+---
+
+<nav class="nav">
+  <ul class="nav__items">
+    {
+      navLinks.map((link: NavLinks) => (
+        <li class="nav__item">
+          <a
+            href={`${link.url}`}
+            class={`nav__link ${
+              currentURL.pathname === link.url ? "active" : ""
+            }`}
+          >
+            {link.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .nav {
+    margin: 2rem 0;
+  }
+
+  .nav__items {
+    list-style: none;
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav__item {
+    margin-left: 12px;
+  }
+
+  .nav__link {
+    color: var(--color-gray);
+    text-transform: capitalize;
+  }
+
+  .nav__link.active {
+    color: var(--color-black);
+    text-decoration: none;
+  }
+</style>

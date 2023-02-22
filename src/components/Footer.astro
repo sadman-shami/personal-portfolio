@@ -1,0 +1,24 @@
+---
+import { NAME } from "../config";
+---
+
+<footer>
+  <p>{new Date().getFullYear()} &copy; {NAME}.</p>
+
+  <a href="rss.xml">RSS</a>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 8rem;
+  }
+
+  footer p,
+  a {
+    font-size: 0.9rem;
+  }
+</style>

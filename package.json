@@ -1,0 +1,20 @@
+{
+  "name": "rahyme-portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev --port=3000",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview --port=3000",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/prefetch": "^0.1.2",
+    "@astrojs/rss": "^2.1.1",
+    "@astrojs/sitemap": "^1.0.1",
+    "astro": "^2.0.14",
+    "rehype-add-classes": "^1.0.0"
+  }
+}

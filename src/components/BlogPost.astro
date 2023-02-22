@@ -1,0 +1,78 @@
+---
+import { days, years } from "../config";
+import Footer from "./Footer.astro";
+import Head from "./Head.astro";
+
+interface BlogPost {
+  title: string;
+  author: string;
+  date: Date;
+  tags: string[];
+}
+
+const { title, author, date, tags } = Astro.props as BlogPost;
+---
+
+<!-- Fri Mar 19 2021 -->
+<div>
+  <Head name={title} />
+  <div class="blog__nav">
+    <div class="blog__info">
+      <span>{author},</span>
+      <span>
+        {days[new Date(date).getDay()]}
+        {years[new Date(date).getMonth()]}
+        {new Date(date).getDate()}
+        {new Date(date).getFullYear()}
+      </span>
+
+      <ul class="tags">
+        {tags && tags.map((tag) => <li class="tag">{tag}</li>)}
+      </ul>
+    </div>
+
+    <a href="/post" class="back">Back</a>
+  </div>
+  <slot />
+  <Footer />
+</div>
+
+<style>
+  .blog__nav {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .blog__info {
+    display: flex;
+    gap: 0.25rem;
+    color: var(--color-gray);
+
+    flex-wrap: wrap;
+  }
+
+  .tags {
+    display: flex;
+    list-style: none;
+  }
+
+  .tag {
+    padding: 0.05rem 0.5rem;
+    background-color: #e8e7e7;
+    border-radius: 0.25rem;
+
+    margin: 0 0.25rem;
+  }
+
+  .back {
+    color: var(--color-gray);
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 600px) {
+    .tag {
+      font-size: 0.8rem;
+    }
+  }
+</style>
