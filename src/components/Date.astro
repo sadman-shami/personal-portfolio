@@ -1,0 +1,12 @@
+---
+import { days, years } from "../config";
+
+const { date } = Astro.props as { date: Date };
+---
+
+<span>
+  {days[new Date(date).getDay()]}
+  {years[new Date(date).getMonth()]}
+  {new Date(date).getDate()}
+  {new Date(date).getFullYear()}
+</span>
