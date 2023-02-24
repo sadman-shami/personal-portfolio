@@ -1,5 +1,5 @@
 ---
-import { days, years } from "../config";
+import Date from "./Date.astro";
 interface Card {
   name: string;
   description: string;
@@ -16,12 +16,7 @@ const { date, description, name, url } = Astro.props as Card;
     {description}
     <a href={`/post/${url}`} class="read__more">Read More &rArr;</a>
   </p>
-  <span class="card__date">
-    {days[new Date(date).getDay()]}
-    {years[new Date(date).getMonth()]}
-    {new Date(date).getDate()}
-    {new Date(date).getFullYear()}
-  </span>
+  <Date date={date} />
 </div>
 
 <style>
@@ -48,11 +43,6 @@ const { date, description, name, url } = Astro.props as Card;
     font-size: 0.95rem;
   }
 
-  .card__date {
-    color: var(--color-gray);
-    font-size: 0.9rem;
-  }
-
   @media screen and (max-width: 600px) {
     .card {
       padding: 0.75rem;
@@ -60,10 +50,6 @@ const { date, description, name, url } = Astro.props as Card;
 
     .card__link {
       font-size: 1.25rem !important;
-    }
-
-    .card__date {
-      font-size: 0.8rem;
     }
   }
 </style>
