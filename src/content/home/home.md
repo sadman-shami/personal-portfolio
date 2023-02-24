@@ -1,4 +1,4 @@
-Hey, I'm Sadman Shami. I enjoy working with React.js Astro.js and crafting beautiful front-end experiences. I do love playing minecraft and watching anime.
+Hey, I'm Sadman Shami. I enjoy working with React.js, Astro.js, Next.js and crafting beautiful front-end experiences. I do love playing minecraft and watching anime.
 
 User of Arch Linux for more than half year.
 
