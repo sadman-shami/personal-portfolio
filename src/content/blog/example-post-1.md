@@ -47,7 +47,7 @@ Ordered
 
 inline `code`
 
-```
+```jsx
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -68,7 +68,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 ```
 
