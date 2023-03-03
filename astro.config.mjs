@@ -8,6 +8,9 @@ import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
+import mdx from "@astrojs/mdx";
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://sadman-shami.vercel.app/",
   markdown: {
@@ -32,5 +35,5 @@ export default defineConfig({
   integrations: [sitemap(), prefetch({
     selector: "a[href^='/post']",
     throttle: 5
-  })]
+  }), mdx()]
 });
