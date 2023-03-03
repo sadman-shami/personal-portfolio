@@ -119,6 +119,7 @@ ol {
 .astro-code > code {
   font-family: "Fira Code", monospace;
   color: var(--color-black);
+  background-color: transparent;
 }
 
 .blockquote {
